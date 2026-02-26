@@ -1,0 +1,46 @@
+.notice * {
+    box-sizing: border-box;
+}
+
+.notice {
+    padding: 1rem;  
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    display: none;
+}
+.notice:before {
+    box-sizing: border-box;
+    display: inline-block;
+    content: '';
+    width: 12px;
+    height: 12px;   
+    margin-right: .5rem;
+    border-radius: 100%;
+    background: #ccc;
+    animation: loading-color 1.5s linear infinite;
+}
+.notice--error:before {
+    background: #ff4e42;
+    box-shadow: 0 0 4px 1px #ff4e42;
+    animation: none;
+}
+
+.rekai-message {
+    height: auto;
+    padding: 1rem 1rem;
+    background-color: rgb(238 237 252);
+    border-color: #5c4ae4;
+}
+
+.rekai-message h4 {
+    margin: 0;
+    margin-right: .5rem;
+    display: inline;
+}
+.rekai-message p {
+    margin: 0;
+    display: inline;
+}

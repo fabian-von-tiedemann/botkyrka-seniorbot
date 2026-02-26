@@ -1,0 +1,465 @@
+﻿#ArtviseWebHelp, #ArtviseWebHelpTab, #ArtviseWebHelp button, #ArtviseWebHelp textarea, #ArtviseWebHelp input, #ArtviseWebHelp select {
+	font-family: Calibri, sans-serif;
+	color: #444;
+}
+
+#ArtviseWebHelp {
+	z-index: 123456789; /* Above Surfly! */
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#ArtviseStartWebHelp,
+#ArtviseWebHelp a, #ArtviseWebHelp a:link, #ArtviseWebHelp a:visited, #ArtviseWebHelp a:hover, #ArtviseWebHelp a:active, #ArtviseWebHelp a:focus {
+	text-decoration: none;
+	color: inherit;
+}
+
+.ArtviseForScreenReaderOnly {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+#ArtviseChatMessageLog a, #ArtviseChatMessageLog a:link, #ArtviseChatMessageLog a:visited, #ArtviseChatMessageLog a:hover, #ArtviseChatMessageLog a:active, #ArtviseChatMessageLog a:focus {
+	text-decoration: underline;
+}
+
+.ArtviseNoDisplay {
+	display: none;
+}
+
+#ArtviseWebHelp button {
+	font-size: 14px;
+	font-weight: normal;
+	padding: 6px;
+	margin: 0;
+	border: none;
+	background-color: #4679a7;
+	color: #ffffff;
+	border-radius: .25em;
+}
+
+#ArtviseWebHelp button:hover {
+	background-color: #326FA5;
+	cursor: pointer;
+}
+
+#ArtviseWebHelp button:disabled {
+	color: #727272;
+	background-color: #f8f8f8;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+#ArtviseWebHelp input, #ArtviseWebHelp select, #ArtviseWebHelp textarea {
+	font-size: 16px; /* fix for iphone auto zoom crap.. needs to be atleast 16px to disable autom zoom */
+	font-weight: normal;
+	margin: 0;
+	border: 1px solid #bbb;
+	background-color: #ffffff;
+}
+
+#ArtviseWebHelp textarea {
+	display: block;
+}
+
+#ArtviseWebHelpTab {
+	z-index: 123456789; /* Above Surfly! */
+	position: fixed;
+	right: 0;
+	top: 50%;
+	
+	display: inline-block;
+	white-space: nowrap;
+
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #4679a7;
+	border-radius: .5em .5em 0 0;
+	box-shadow: 0 0 2px 1px #444;
+	
+	-ms-transform-origin: right top; /* IE 9 */
+	-webkit-transform-origin: right top; /* Safari */
+	transform-origin: right top;
+
+	-ms-transform: rotate(-90deg) translateX(50%) translateY(-100%); /* IE 9 */
+	-webkit-transform: rotate(-90deg) translateX(50%) translateY(-100%); /* Safari */
+	transform: rotate(-90deg) translateX(50%) translateY(-100%);
+}
+
+#ArtviseWebHelpTab .question-bubble {
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Safari */
+	transform: rotate(90deg);
+	vertical-align: bottom;
+}
+
+#ArtviseStartWebHelp {
+	padding: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	display: block;
+}
+
+#ArtviseWebHelpMain {
+	display: none;
+	padding: 6px;
+	margin: 2px;
+
+	background-color: #f0f0f0;
+	box-shadow: 0 0 2px 1px #444;
+}
+
+#ArtviseDialogCollapsableContainer {
+	display: none;
+	width: 320px;
+}
+
+#ArtviseDialogHeader {
+	display: none;
+	font-size: 18px;
+	padding: 6px;
+	margin: -6px -6px 6px -6px;
+	background-color: #4679a7;
+	color: #ffffff;
+}
+
+#ArtviseDialogContent {
+	display: none;
+}
+
+#ArtviseWebHelp .ArtviseDialogButton {
+	width: 30px;
+	height: 30px;
+}
+
+#ArtviseWebHelp #ArtviseDialogExpandButton {
+	background-image: url('Images/expand.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: 6px;
+	display: none;
+}
+#ArtviseWebHelp #ArtviseDialogCollapseButton {
+	background-image: url('Images/collapse.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: 6px;
+}
+
+#ArtviseWebHelp #ArtviseDialogCancelButton {
+	background-image: url('Images/close.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: 6px;
+}
+
+#ArtviseWebHelp #ArtviseDialogCancelButton:hover {
+	background-color: red;
+}
+
+#ArtviseWebHelp #ArtviseSendMailButton {
+	background-image: url('Images/mail.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+
+.ArtviseEstimatedWaitingTime {
+	margin: 12px 0;
+	text-align: center;
+}
+
+.ArtvisePublicRecordAccessNotice {
+	display: none;
+	margin: 12px 0;
+	text-align: center;
+}
+
+#ArtviseDialogStatusContainer {
+	display: none;
+	text-align: center;
+	padding: 6px;
+	margin: 6px -6px -6px -6px; /* Important: the top margin is set by javascript, so changing it here will have no effect! */
+	background-color: #3C6990;
+	color: white;
+}
+#ArtviseStatusMessage {
+	display: inline-block;
+	vertical-align: middle;
+}
+#ArtviseSpinner {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+/*	background-image: url("Images/Spinner.gif");
+	background-repeat: no-repeat;*/
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#ArtviseQueuePositionContainer {
+	display: none;
+}
+
+#ArtviseWebSessionId {
+	font-weight: bold;
+}
+
+#ArtviseCreateMessageCaseIdentifier {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#ArtviseSelectExtensionPanel {
+	display: none;
+}
+
+#ArtviseChatClosedPanel {
+	display: none;
+}
+
+#ArtviseNoAgentAvailablePanel {
+	display: none;
+}
+
+#ArtviseCreateMessageCaseReceiptPanel {
+	display: none;
+}
+
+#ArtviseUserInfoPanel {
+	margin-bottom: 6px;
+}
+
+#ArtviseActionPanel {
+	display: none;
+}
+
+/* Begin system messages */
+#ArtviseSystemMessagePanel {
+	display: none;
+}
+#ArtviseSystemMessageList {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+	#ArtviseSystemMessageList > li {
+		padding: 5px;
+		margin: 3px 0;
+		background-color: rgb(255, 252, 239);
+		border: thin solid #ccc;
+	}
+.ArtviseSystemMessageHeader {
+	font-weight: bold;
+}
+.ArtviseSystemMessageSubheader {
+	font-size: 90%;
+}
+.ArtviseSystemMessageText {
+	padding: 5px 0;
+}
+.ArtviseSystemMessageMoreInfo {
+	font-size: 90%;
+}
+#ArtviseSystemMessageList .ArtviseSystemMessageMoreInfo > a {
+	text-decoration: underline;
+}
+/* End system messages */
+
+/* Begin chat */
+#ArtviseChatPanel {
+	display: none;
+	margin-top: 6px;
+}
+#ArtviseChatMessageLog {
+	/*
+		One way to dynamically adjust the height is to use vh:
+
+		max-height: 60vh;
+		min-height: 300px;
+	*/
+	height: 300px;
+	padding: 3px;
+	background-color: white;
+	overflow: auto;
+}
+	#ArtviseChatMessageLog:focus-visible { /* When focused by e.g. keyboard tab */
+		outline: auto;
+	}
+#ArtviseChatMessageList {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.ArtviseOutgoingChatMessage {
+	padding: 6px;
+	margin-bottom: 6px;
+	margin-left: 20px;
+	background-color: #dddddd;
+	border-radius: 4px 0 0 4px;
+}
+.ArtviseIncomingChatMessage {
+	padding: 6px;
+	margin-bottom: 6px;
+	margin-right: 20px;
+	background-color: #ffd700;
+	border-radius: 0 4px 4px 0;
+}
+.ArtviseInfoChatMessage {
+	padding: 6px;
+	margin-bottom: 6px;
+	background-color: #f0f0ff;
+}
+.ArtviseErrorChatMessage {
+	padding: 6px;
+	margin-bottom: 6px;
+	background-color: #ffbcbc;
+}
+.ArtviseChatMessageLabel {
+	margin-bottom: 3px;
+	font-size: 95%;
+}
+.ArtviseChatMessageSenderName {
+	display: inline-block;
+	font-weight: bold;
+	margin-right: .5em;
+}
+.ArtviseChatMessageTime {
+	display: inline-block;
+}
+#ArtviseChatMessageInputPanel {
+	margin-top: 6px;
+	height: 50px;
+}
+#ArtviseChatMessageText {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+#ArtviseSendChatMessage {
+	height: 100%;
+	margin-left: 6px;
+}
+/* End chat */
+
+/* Begin url opener */
+#ArtviseUrlOpeningIframeContainer {
+	z-index: 123456787; /* 2 below #ArtviseWebHelp */
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.25); /* Semi-transparently grey out the underlying elements a bit */
+}
+#ArtviseUrlOpeningIframeHeaderContainer {
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	top: 12px;
+	background-color: lightgrey;
+	border: 1px solid black;
+	border-bottom: 1px solid #888;
+	border-radius: 5px 5px 0 0;
+	height: 30px;
+}
+#ArtviseUrlOpeningIframeLinkContainer {
+	position: absolute;
+	font-family: Calibri, sans-serif;
+	font-size: 14px;
+	left: 3px;
+	top: 3px;
+	color: black;
+	line-height: 24px;
+}
+#ArtviseUrlOpeningIframeLink {
+	font-family: Calibri, sans-serif;
+	font-size: 14px;
+	color: black;
+	font-weight: normal;
+	text-decoration: underline;
+}
+#ArtviseUrlOpeningIframeCloseButton {
+	z-index: 123456788; /* 1 below #ArtviseWebHelp, but above #ArtviseUrlOpeningIframeLinkContainer */
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	height: 24px;
+	font-family: Calibri, sans-serif;
+	font-size: 13px;
+}
+#ArtviseUrlOpeningIframeContentContainer {
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	top: 44px;
+	bottom: 12px;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	border: 1px solid black;
+	border-top: none;
+}
+#ArtviseUrlOpeningIframeLoadingMessage {
+	font-family: Calibri, sans-serif;
+	font-size: 14px;
+	margin: 12px 0 0 12px;
+}
+#ArtviseUrlOpeningIframe {
+	z-index: 123456788; /* 1 below #ArtviseWebHelp */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: inline-block;
+}
+/* End url opener */
+
+.ArtviseTable {
+	display: table;
+	width: 100%;
+}
+.ArtviseTableRow {
+	display: table-row;
+	height: 100%;
+	width: 100%;
+}
+.ArtviseTableCell {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+
+
+
+/* Responsive stuff START */
+
+/* only change height on small screens */
+@media only screen and (max-width: 600px) {
+	#ArtviseChatMessageLog {
+		height: 64vh;
+	}
+}
+
+/* Responsive stuff END */
+
